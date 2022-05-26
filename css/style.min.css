@@ -1623,10 +1623,10 @@ body.ie ._ibg img {
 .box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(335px,1fr))[4];
-  grid-template-columns: repeat(4,minmax(335px,1fr));
-  -ms-grid-rows: (minmax(335px,1fr))[2];
-  grid-template-rows: repeat(2,minmax(335px,1fr));
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 16px;
   width: 100%;
   height: 100%;
@@ -1645,6 +1645,10 @@ body.ie ._ibg img {
   grid-column: span 2;
   -ms-grid-row-span: 2;
   grid-row: span 2;
+}
+
+.box__item02 {
+  min-height: 335px;
 }
 
 .box__image {
@@ -1783,19 +1787,19 @@ body.ie ._ibg img {
   }
 
   .box {
-    -ms-grid-columns: (minmax(335px,1fr))[3];
-    grid-template-columns: repeat(3,minmax(335px,1fr));
-    -ms-grid-rows: (minmax(335px,1fr))[3];
-    grid-template-rows: repeat(3,minmax(335px,1fr));
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
 @media (max-width:1200px) {
   .box {
-    -ms-grid-columns: (minmax(335px,1fr))[2];
-    grid-template-columns: repeat(2,minmax(335px,1fr));
-    -ms-grid-rows: (minmax(335px,1fr))[4];
-    grid-template-rows: repeat(4,minmax(335px,1fr));
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -1884,6 +1888,7 @@ body.ie ._ibg img {
     -webkit-transition: all .3s ease 0s;
     -o-transition: all .3s ease 0s;
     transition: all .3s ease 0s;
+    text-transform: uppercase;
   }
 
   .menu__link:hover {
@@ -2035,11 +2040,11 @@ body.ie ._ibg img {
   }
 
   .box {
-    -ms-grid-columns: (minmax(200px,1fr))[2];
-    grid-template-columns: repeat(2,minmax(200px,1fr));
-    -ms-grid-rows: (minmax(200px,1fr))[4];
-    grid-template-rows: repeat(4,minmax(200px,1fr));
     gap: 10px;
+  }
+
+  .box__item02 {
+    min-height: 250px;
   }
 }
 
@@ -2079,11 +2084,8 @@ body.ie ._ibg img {
             flex: 1 1 100%;
   }
 
-  .box {
-    -ms-grid-columns: (minmax(182px,1fr))[2];
-    grid-template-columns: repeat(2,minmax(182px,1fr));
-    -ms-grid-rows: (minmax(182px,1fr))[4];
-    grid-template-rows: repeat(4,minmax(182px,1fr));
+  .box__item02 {
+    min-height: 182px;
   }
 }
 
@@ -2098,12 +2100,5 @@ body.ie ._ibg img {
 
   .select__options {
     width: 280px;
-  }
-
-  .box {
-    -ms-grid-columns: (minmax(155px,1fr))[2];
-    grid-template-columns: repeat(2,minmax(155px,1fr));
-    -ms-grid-rows: (minmax(155px,1fr))[4];
-    grid-template-rows: repeat(4,minmax(155px,1fr));
   }
 }
